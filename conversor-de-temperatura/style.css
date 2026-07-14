@@ -1,0 +1,24 @@
+body {
+
+    text-align: center;
+    font-family: Arial, sans-serif;
+
+    transition: 0.3s;
+
+}
+
+
+input {
+
+    padding: 10px;
+
+    font-size: 18px;
+
+}
+
+
+#resultado {
+
+    font-size: 25px;
+
+}
