@@ -1,49 +1,41 @@
-body {
-
-    text-align: center;
-    font-family: Arial, sans-serif;
-
-}
+const tarefa = document.querySelector("#tarefa");
+const botaoAdicionar = document.querySelector("#botaoAdicionar");
+const lista = document.querySelector("#lista");
+const aviso = document.querySelector("#aviso");
 
 
-input {
+botaoAdicionar.addEventListener("click", function(){
 
-    padding: 10px;
-
-    font-size: 16px;
-
-}
+    let texto = tarefa.value;
 
 
-button {
+    if(texto === ""){
 
-    padding: 10px 20px;
+        aviso.innerHTML = "Digite uma tarefa!";
 
-    cursor: pointer;
+    } 
+    else {
 
-}
-
-
-#aviso {
-
-    color: red;
-
-}
+        let item = document.createElement("li");
 
 
-.estudar {
-
-    font-weight: bold;
-
-}
+        item.innerHTML = texto;
 
 
-li {
+        if(texto === "Estudar"){
 
-    list-style-position: inside;
+            item.classList.add("estudar");
 
-    font-size: 20px;
+        }
 
-    margin: 10px;
 
-}
+        lista.appendChild(item);
+
+
+        tarefa.value = "";
+
+        aviso.innerHTML = "";
+
+    }
+
+});
